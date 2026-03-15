@@ -1,0 +1,13 @@
+train: D:/YOLO/Dataset/train/images
+val: D:/YOLO/Dataset/valid/images
+test: D:/YOLO/Dataset/test/images
+
+nc: 1
+names: ['pencil']
+
+roboflow:
+  workspace: serhats-workspace-tkvc9
+  project: pencils-2gg8p
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/serhats-workspace-tkvc9/pencils-2gg8p/dataset/1

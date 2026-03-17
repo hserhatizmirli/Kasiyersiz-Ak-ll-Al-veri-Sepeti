@@ -1,13 +1,13 @@
-train: D:/YOLO/Dataset/train/images
-val: D:/YOLO/Dataset/valid/images
-test: D:/YOLO/Dataset/test/images
+train: ../train/images
+val: ../valid/images
+test: ../test/images
 
-nc: 1
-names: ['pencil']
+nc: 4
+names: ['4', 'pen', 'pencil', 'signature pen']
 
 roboflow:
   workspace: serhats-workspace-tkvc9
-  project: pencils-2gg8p
-  version: 1
+  project: kalem-jhklj
+  version: 3
   license: CC BY 4.0
-  url: https://universe.roboflow.com/serhats-workspace-tkvc9/pencils-2gg8p/dataset/1
+  url: https://universe.roboflow.com/serhats-workspace-tkvc9/kalem-jhklj/dataset/3

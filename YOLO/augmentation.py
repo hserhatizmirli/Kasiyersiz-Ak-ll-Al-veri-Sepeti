@@ -5,7 +5,7 @@ import glob
 print("TensorFlow sürümü:", tf.__version__)
 
 # Klasör Yolları
-source_dir = 'C:\\Users\\hsisec\\Desktop\\fotto'
+source_dir = 'C:\\Users\\hsisec\\Desktop\\foto'
 target_dir = 'C:\\Users\\hsisec\\Desktop\\aug_foto'
 os.makedirs(target_dir, exist_ok=True)
 
@@ -26,8 +26,8 @@ print(f"Hedef boyut: {target_size[0]}×{target_size[1]}")
 
 # Efektler
 rotate_angles = [1, 2, 3, 4]  # 90°, 180°, 270°, 360°
-dark_factor = 0.6
-bright_factor = 0.6
+dark_factor = 0.3
+bright_factor = 0.3
 blur_sigma = 1.0
 
 print("\n--- EFEKT PLANI ---")
@@ -74,15 +74,15 @@ for img_path in resim_listesi:
     img_array = tf.keras.utils.img_to_array(img)
     
     # ----- 1. ROTATE -----
-    # for r in rotate_angles:
-    #     rotated = apply_rotate(img_array, r)
+    for r in rotate_angles:
+        rotated = apply_rotate(img_array, r)
         
-    #     rotated = tf.clip_by_value(rotated, 0, 255)
-    #     rotated = tf.cast(rotated, tf.uint8)
-    #     pil_img = tf.keras.utils.array_to_img(rotated)
-    #     save_path = os.path.join(target_dir, f"rotate_{r*90}deg_{os.path.basename(img_path)}")
-    #     pil_img.save(save_path, quality=95)  # Kalite yüksek
-    #     sayac += 1
+        rotated = tf.clip_by_value(rotated, 0, 255)
+        rotated = tf.cast(rotated, tf.uint8)
+        pil_img = tf.keras.utils.array_to_img(rotated)
+        save_path = os.path.join(target_dir, f"rotate_{r*90}deg_{os.path.basename(img_path)}")
+        pil_img.save(save_path, quality=95)  # Kalite yüksek
+        sayac += 1
     
     # ----- 2. DARK -----
     dark_img = apply_dark(img_array, factor=dark_factor)

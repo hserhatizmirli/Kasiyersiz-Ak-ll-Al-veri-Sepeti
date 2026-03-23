@@ -8,7 +8,7 @@ def main():
     
     # fine-tune kısmı
     results = model.train(
-        data='D:/YOLO/Dataset/data.yaml', epochs=150, name='yolo11', project='D:/YOLO/runs/detect',  # Project klasörünü düzelt!exist_ok=True
+        data='D:/YOLO/Dataset/data.yaml', epochs=50, name='yolo11', project='D:/YOLO/runs/detect',  # Project klasörünü düzelt!exist_ok=True
     )
     print("Eğitim tamamlandı!")
     print(f"Model kaydedildi: D:/YOLO/runs/detect/yolo11/weights/best.pt")

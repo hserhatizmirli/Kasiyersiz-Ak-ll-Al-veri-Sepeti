@@ -19,16 +19,16 @@ for uzanti in resim_uzantilari:
 print(f"Bulunan resim sayısı: {len(resim_listesi)}")
 
 # ---------- BOYUT AYARI ----------
-target_size = (600, 600)  # 🟢 600×600 yaptık!
+target_size = (640, 640)  # 🟢 600×600 yaptık!
 # ---------------------------------
 
 print(f"Hedef boyut: {target_size[0]}×{target_size[1]}")
 
 # Efektler
 rotate_angles = [1, 2, 3, 4]  # 90°, 180°, 270°, 360°
-dark_factor = 0.3
-bright_factor = 0.3
-blur_sigma = 1.0
+dark_factor = 0.35
+bright_factor = 0.35
+blur_sigma = 2.0
 
 print("\n--- EFEKT PLANI ---")
 print(f"1. ROTATE: {len(rotate_angles)} varyasyon (90°, 180°, 270°)")
